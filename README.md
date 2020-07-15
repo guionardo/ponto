@@ -15,3 +15,4 @@ CLI para registro de horas trabalhadas
 
 ```bash
 ponto setup --list --hours-per-day HH:MM
+```
