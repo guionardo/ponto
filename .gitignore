@@ -1,0 +1,5 @@
+.sonarlint
+.vscode
+*.pyc
+__pycache__
+
