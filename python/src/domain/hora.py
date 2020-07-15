@@ -1,4 +1,3 @@
-import math
 from datetime import timedelta
 
 
@@ -39,7 +38,7 @@ class Hora:
         horas = td.seconds // 3600
         minutos = (td.seconds - horas * 3600)//60
 
-        return cls(horas, minutos)    
+        return cls(horas, minutos)
 
     def __str__(self):
         return "{0:02d}:{1:02d}".format(self._hora, self._minuto)
@@ -57,4 +56,5 @@ class Hora:
         return hash(self) > hash(other)
 
     def __eq__(self, other):
-        return (self.__class__ == other.__class__ and hash(self) == hash(other))
+        return (self.__class__ == other.__class__ and
+                hash(self) == hash(other))

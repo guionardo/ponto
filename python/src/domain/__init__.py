@@ -1,3 +1,4 @@
-__all__ = ['Hora']
+__all__ = ['Hora', 'ListaHora']
 
 from .hora import Hora
+from .lista_hora import ListaHora
