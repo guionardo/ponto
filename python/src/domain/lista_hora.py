@@ -1,4 +1,3 @@
-from src.exceptions import ListaHoraException
 from datetime import timedelta
 from .hora import Hora
 
@@ -14,7 +13,8 @@ class ListaHora(list):
                     item = Hora.from_timedelta(item)
                 elif not isinstance(item, Hora):
                     raise TypeError(
-                        "Expected str, timedelta or Hora type. Received '"+str(item.__class__)+"'")
+                        "Expected str, timedelta or Hora type. "
+                        f"Received '{item.__class__}'")
                 args[0][i] = item
         super().__init__(*args, **kwargs)
         self._sort()
@@ -25,7 +25,8 @@ class ListaHora(list):
     def append(self, item: Hora):
         if not isinstance(item, Hora):
             raise TypeError(
-                "Expected type Hora for item. Received '"+str(item.__class__)+"'")
+                "Expected type Hora for item. "
+                f"Received '{item.__class__}'")
         if self.index(item) > -1:
             return
         super().append(item)
