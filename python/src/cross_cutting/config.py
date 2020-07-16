@@ -1,5 +1,5 @@
-import os
 import datetime
+import os
 from pathlib import Path
 
 from gs_config import ConfigClass, ConfigType, DefaultValue
@@ -25,5 +25,5 @@ def get_config() -> Config:
     if CONFIG:
         return CONFIG
     CONFIG = Config()
-
+    
     return CONFIG

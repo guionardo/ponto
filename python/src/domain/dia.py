@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 
-from src.cross_cutting import get_config,Config
+from src.cross_cutting import get_config, Config
 from src.cross_cutting.utils import now_as_timedelta
 from src.enums import ESTADO_DESCRICAO, EstadoDia
 
@@ -178,4 +178,3 @@ class Dia:
         self._marcas.clear()
         for hora in from_dict['horas']:
             self.marcar(Hora.from_string(hora))
-
