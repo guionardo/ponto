@@ -9,6 +9,7 @@ flake8 = "*"
 autopep8 = "*"
 
 [packages]
+config-guiosoft = "*"
 
 [requires]
 python_version = "3.8"
