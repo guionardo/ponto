@@ -1,1 +1,5 @@
 __version__ = '0.1.0'
+__description__ = 'Controle de horarios'
+__tool_name__ = 'ponto'
+__author__ = 'Guionardo Furlan'
+__author_email__ = 'guionardo@gmail.com'

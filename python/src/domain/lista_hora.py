@@ -1,4 +1,5 @@
 from datetime import timedelta
+
 from .hora import Hora
 
 
@@ -31,6 +32,14 @@ class ListaHora(list):
             return
         super().append(item)
         self._sort()
+
+    def remove(self, item: Hora):
+        if not isinstance(item, Hora):
+            raise TypeError("Expected type Hora for item. "
+                            f"Received '{item.__class__}")
+        index = self.index(item)
+        if index >= 0:
+            del(self[index])
 
     def index(self, item: Hora, start=0, stop=99999):
         for i, h in enumerate(self):
